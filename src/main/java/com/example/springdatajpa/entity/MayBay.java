@@ -27,6 +27,8 @@ public class MayBay {
 	private String Loai;
 	@Column(name = "Tambay")
 	private int tam_bay;
+	@ManyToMany(mappedBy = "mayBays")
+	private List<NhanVien> nhanViens;
 	
 	
 	

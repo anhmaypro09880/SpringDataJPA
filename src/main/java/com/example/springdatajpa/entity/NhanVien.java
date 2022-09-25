@@ -5,6 +5,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.Collection;
 import java.util.List;
 
 import javax.persistence.Column;
@@ -30,9 +31,9 @@ public class NhanVien {
 	@Column(name = "Luong")
 	private int Luong;
 //		@OneToMany(mappedBy = "MaNV")
-	@ManyToMany()
+	@ManyToMany
 	@JoinTable(
-			name = "chuyenbay", 
+			name = "chungnhan",
 			joinColumns = @JoinColumn(name = "MaNV"),
 			 
 			inverseJoinColumns = @JoinColumn(name = "MaMB"))
