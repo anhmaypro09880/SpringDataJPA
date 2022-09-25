@@ -15,9 +15,9 @@ class SpringDataJpaApplicationTests {
     ChuyenBayRepository cbRepository;
     @Test
     void contextLoads() {
-        List<ChuyenBay> list = cbRepository.findAll();
+        List<ChuyenBay> list = cbRepository.getChuyenBayDad();
         list.forEach(e->{
-            System.out.println(e.getGaDi());
+            System.out.println(e.toString());
         });
     }
 
