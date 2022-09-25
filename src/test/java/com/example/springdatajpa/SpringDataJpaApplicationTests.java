@@ -64,5 +64,27 @@ class SpringDataJpaApplicationTests {
         int list = mbRepository.cau7();
         System.out.println("So may bay Boeing :"+list);
     }
+    @Test
+    void cau8() {
+        Double list = nvRepository.cau8();
+        System.out.println("So tien cong phai tra :"+list);
+    }
+    @Test
+    void cau9() {
+        List<String> list = nvRepository.cau9();
+        list.forEach(e->{
+            System.out.println(e);
+        });
+    }
+    @Test
+    void cau10() {
+        List<NhanVien> list = nvRepository.cau10();
+//        list.forEach(e->{
+//            System.out.println(e.toString());
+//        });
+        for(int i=0;i< list.size();i++){
+            System.out.println("NhanVien: "+list.get(i).getTen());
+        }
+    }
 
 }
