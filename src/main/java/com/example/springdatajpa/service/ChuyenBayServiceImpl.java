@@ -18,5 +18,5 @@ public class ChuyenBayServiceImpl implements ChuyenBayService {
 		// TODO Auto-generated method stub
 		return cbDao.findAll();
 	}
-		
+
 }

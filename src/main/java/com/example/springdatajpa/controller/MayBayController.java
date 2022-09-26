@@ -2,6 +2,7 @@ package com.example.springdatajpa.controller;
 
 import java.util.List;
 
+import com.example.springdatajpa.dao.MayBayRepository;
 import com.example.springdatajpa.entity.MayBay;
 import com.example.springdatajpa.service.MayBayService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,13 +14,16 @@ import org.springframework.web.bind.annotation.RestController;
 
 
 @RestController
-@RequestMapping("/api")
+@RequestMapping("/maybay")
 public class MayBayController  {
 	@Autowired
 	private MayBayService mbService;
+	@Autowired
+	private MayBayRepository mbRepository;
 	
-	@GetMapping("/maybay")
+	@GetMapping("/allMb")
 	public List<MayBay> getAllMayBay() {
-		return mbService.findAll();
+		return mbRepository.findAll();
 	}
+
 }

@@ -30,7 +30,7 @@ class SpringDataJpaApplicationTests {
     void cau2() {
         List<MayBay> list = mbRepository.getMayBayDuoi10km();
         list.forEach(e->{
-            System.out.println(e.toString());
+            System.out.println(e.getMaMB());
         });
     }
     @Test

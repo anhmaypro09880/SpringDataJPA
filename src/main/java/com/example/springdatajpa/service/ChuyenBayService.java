@@ -8,4 +8,5 @@ import com.example.springdatajpa.entity.ChuyenBay;
 
 public interface ChuyenBayService {
 	public List<ChuyenBay> findAll();
+
 }

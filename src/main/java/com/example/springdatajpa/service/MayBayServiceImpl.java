@@ -10,7 +10,7 @@ import org.springframework.stereotype.Service;
 
 
 @Service
-public class MayBayImpl implements MayBayService {
+public class MayBayServiceImpl implements MayBayService {
 		@Autowired
 		private MayBayRepository mbService;
 

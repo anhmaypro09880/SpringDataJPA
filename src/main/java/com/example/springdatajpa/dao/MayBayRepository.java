@@ -9,7 +9,7 @@ import java.util.List;
 
 
 public interface MayBayRepository extends JpaRepository<MayBay, Integer> {
-        //Cau 2
+//        Cau 2
         @Query(value =  "Select * From MayBay where TamBay <10000",nativeQuery = true)
         public List<MayBay> getMayBayDuoi10km();
         //Cau 7
